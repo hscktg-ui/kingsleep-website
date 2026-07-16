@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -36,15 +36,16 @@
     <span class="top-banner__item top-banner__rotate">제품 안내 사이트 · 구매는 네이버 스마트스토어</span>
     <span class="top-banner__dot"></span>
     <a href="#" data-smartstore class="top-banner__item">스마트스토어 바로가기 →</a>
-    <span class="top-banner__dot top-banner__dot--alt"></span>
-    <a href="#" data-kakao class="top-banner__item top-banner__item--kakao">카카오톡 상담</a>
   </div>
 
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="KING SLEEP 홈">
-        <img src="assets/logo-mark.png" alt="" class="logo__mark" width="34" height="34" aria-hidden="true">
-        <span class="logo__wordmark">KING SLEEP</span>
+        <img src="assets/logo-mark.png" alt="" class="logo__mark" width="36" height="36" aria-hidden="true">
+        <span class="logo__copy">
+          <span class="logo__wordmark">KING SLEEP</span>
+          <span class="logo__slogan">Premium Comfort, Royal Quality</span>
+        </span>
       </a>
       <nav class="nav">
         <a href="index.html" class="active">홈</a>
@@ -63,7 +64,12 @@
 
   <section class="hero">
     <div class="hero__content">
-      <img src="assets/logo-gold.png" alt="KING SLEEP — PREMIUM COMFORT, ROYAL QUALITY" class="hero__logo-mark">
+      <div class="hero__brand">
+        <img src="assets/logo-mark-gold.png" alt="" class="hero__brand-mark" aria-hidden="true">
+        <div class="hero__brand-wordmark">KING SLEEP</div>
+        <div class="hero__brand-slogan">Premium Comfort, Royal Quality</div>
+        <div class="hero__brand-tagline">좋은 잠이 좋은 하루를 만듭니다</div>
+      </div>
       <div class="hero__values">
         <div class="hero__value">
           <div class="hero__value-icon">◆</div>
@@ -353,7 +359,11 @@
 
   <section class="brand-promise">
     <div class="container">
-      <img src="assets/logo-gold.png" alt="" class="brand-promise__logo" aria-hidden="true">
+      <div class="brand-promise__brand">
+        <img src="assets/logo-mark-gold.png" alt="" class="brand-promise__mark" aria-hidden="true">
+        <div class="brand-promise__wordmark">KING SLEEP</div>
+        <div class="brand-promise__slogan">Premium Comfort, Royal Quality</div>
+      </div>
       <div class="brand-promise__label">BRAND PROMISE</div>
       <p>킹슬립은 단순한 가구 브랜드가 아닙니다. 정직한 품질과 세심한 서비스로 여러분의 하루를 바꾸는 가치를 만들어 갑니다.</p>
     </div>
@@ -361,7 +371,14 @@
 
   <footer class="footer">
     <div class="container footer__grid">
-      <div class="footer__logo"><img src="assets/logo-compact.png" alt="KING SLEEP"></div>
+      <div class="footer__logo">
+        <img src="assets/logo-mark.png" alt="" class="logo__mark" width="40" height="40" aria-hidden="true">
+        <div class="logo__copy">
+          <div class="logo__wordmark">KING SLEEP</div>
+          <div class="logo__slogan">Premium Comfort, Royal Quality</div>
+          <p class="logo__tagline">좋은 잠이 좋은 하루를 만듭니다</p>
+        </div>
+      </div>
       <div>
         <h5>고객센터</h5>
         <ul>
@@ -377,7 +394,6 @@
           <li><a href="products.html">제품 라인업</a></li>
           <li><a href="index.html#stores">매장 체험</a></li>
           <li><a href="service-policy.html">배송·A/S 안내</a></li>
-          <li><a href="#" data-kakao>카카오톡 상담</a></li>
         </ul>
       </div>
       <div>
@@ -398,7 +414,6 @@
       <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h2l1 4-2 1a11 11 0 005 5l1-2 4 1v2a2 2 0 01-2 2h-1C7.8 16 3 11.2 3 5z"/></svg>
       070-1234-5678
     </a>
-    <a href="#" data-kakao class="phone-cta__kakao" aria-label="카카오톡 상담">카톡</a>
   </div>
 
   <script src="js/data.js"></script>

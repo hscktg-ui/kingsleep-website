@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initStores();
   initArticles();
   initProductPage();
-  initKakaoLinks();
 });
 
 function initBannerRotate() {
@@ -61,16 +60,6 @@ function initBannerRotate() {
       banner.style.opacity = "1";
     }, 300);
   }, 5000);
-}
-
-function initKakaoLinks() {
-  const url = KING_SLEEP_DATA?.kakaoChannelUrl;
-  if (!url) return;
-  document.querySelectorAll("[data-kakao]").forEach((el) => {
-    el.href = url;
-    el.target = "_blank";
-    el.rel = "noopener";
-  });
 }
 
 function initSmartstoreLinks() {

@@ -13,7 +13,7 @@
   --gray-600: #5c5a55;
   --text: #1a1a1a;
   --max-width: 1280px;
-  --header-h: 72px;
+  --header-h: 76px;
   --banner-h: 40px;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-sm: 0 2px 12px rgba(13, 27, 42, 0.06);
@@ -45,6 +45,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 a {
@@ -106,10 +107,6 @@ button {
   transition: opacity 0.3s var(--ease);
 }
 
-.top-banner__item--kakao {
-  opacity: 0.9;
-}
-
 /* ── Header ── */
 .header {
   position: fixed;
@@ -145,35 +142,39 @@ button {
 }
 
 .logo__mark {
-  height: 34px;
-  width: auto;
+  height: 36px !important;
+  width: auto !important;
+  max-width: 48px;
   flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.logo__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
 }
 
 .logo__wordmark {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.1875rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: var(--navy);
-  line-height: 1;
+  line-height: 1.1;
   white-space: nowrap;
 }
 
-/* Legacy full-logo img (footer etc.) */
-.logo img:not(.logo__mark) {
-  height: 44px;
-  width: auto;
-  max-width: 180px;
-  object-fit: contain;
-}
-
-.logo__text {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.375rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--navy);
+.logo__slogan {
+  font-size: 0.5625rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--gray-400);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -256,11 +257,42 @@ button {
   color: var(--white);
 }
 
-.hero__logo-mark {
-  width: min(240px, 72%);
-  height: auto;
+.hero__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.hero__brand-mark {
+  height: 56px !important;
+  width: auto !important;
+  max-width: 80px;
   object-fit: contain;
-  margin-bottom: 32px;
+}
+
+.hero__brand-wordmark {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  line-height: 1.1;
+}
+
+.hero__brand-slogan {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+}
+
+.hero__brand-tagline {
+  font-family: "Noto Serif KR", serif;
+  font-size: 0.9375rem;
+  color: var(--gold-light);
+  letter-spacing: 0.02em;
 }
 
 .hero__title {
@@ -735,13 +767,34 @@ button {
   text-align: center;
 }
 
-.brand-promise__logo {
-  width: min(168px, 42%);
-  height: auto;
+.brand-promise__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.brand-promise__mark {
+  height: 48px !important;
+  width: auto !important;
+  max-width: 72px;
   object-fit: contain;
-  margin: 0 auto 20px;
-  display: block;
-  opacity: 0.95;
+}
+
+.brand-promise__wordmark {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+}
+
+.brand-promise__slogan {
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
 }
 
 .brand-promise__label {
@@ -769,25 +822,58 @@ button {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 1.4fr;
   gap: 40px;
-  padding-bottom: 48px;
+  padding-bottom: 56px;
+  align-items: start;
 }
 
-.footer__logo img {
-  height: auto;
-  width: min(148px, 100%);
+.footer__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  overflow: visible;
+  min-width: 0;
+}
+
+.footer__logo .logo__mark {
+  width: 40px !important;
+  height: 40px !important;
+  max-width: 40px !important;
+  flex-shrink: 0;
   object-fit: contain;
-  margin-bottom: 12px;
+  display: block;
 }
 
-.footer__logo .logo__text {
-  font-size: 1.125rem;
-  margin-bottom: 8px;
+.footer__logo .logo__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 2px;
+  min-width: 0;
 }
 
-.footer__logo p {
-  font-size: 0.75rem;
+.footer__logo .logo__wordmark {
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  line-height: 1.15;
+  color: var(--navy);
+}
+
+.footer__logo .logo__slogan {
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  white-space: normal;
+  line-height: 1.35;
   color: var(--gray-400);
-  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer__logo .logo__tagline {
+  font-family: "Noto Serif KR", serif;
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+  margin-top: 2px;
+  line-height: 1.5;
 }
 
 .footer h5 {
@@ -1188,19 +1274,25 @@ button {
 
 @media (max-width: 768px) {
   .top-banner__item:nth-child(2),
-  .top-banner__dot,
-  .top-banner__dot--alt,
-  .top-banner__item--kakao {
+  .top-banner__dot {
     display: none;
   }
 
   .logo__wordmark {
     font-size: 1.05rem;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
+  }
+
+  .logo__slogan {
+    display: none;
   }
 
   .logo__mark {
     height: 30px;
+  }
+
+  .hero__brand-mark {
+    height: 44px;
   }
 
   .nav {

@@ -1,7 +1,6 @@
 const KING_SLEEP_DATA = {
   smartstoreUrl: "https://smartstore.naver.com/kingsleep",
   smartstoreLabel: "네이버 스마트스토어",
-  kakaoChannelUrl: "https://pf.kakao.com/_kingsleep",
   purchaseNotice: "본 사이트는 제품 안내용입니다. 구매·결제는 네이버 스마트스토어에서 진행됩니다.",
   installmentNote: "스마트스토어 카드 무이자 할부 · 카드사별 상이",
 
@@ -9,7 +8,6 @@ const KING_SLEEP_DATA = {
     "제품 안내 사이트 · 구매는 네이버 스마트스토어",
     "전국 무료 배송 · 전문 기사 설치",
     "매장 체험 예약 · 수면 전문 상담 070-1234-5678",
-    "카카오톡 채널 상담 · 빠른 제품 문의",
   ],
 
   brandMilestones: [

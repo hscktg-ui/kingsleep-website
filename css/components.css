@@ -1083,25 +1083,6 @@
   padding-bottom: 2px;
 }
 
-.phone-cta__kakao {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  height: 44px;
-  padding: 0 12px;
-  background: #fee500;
-  color: #3c1e1e;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.phone-cta__kakao:hover {
-  opacity: 0.92;
-}
-
 .policy-page {
   margin-top: calc(var(--banner-h) + var(--header-h));
   padding: 48px 0 96px;
