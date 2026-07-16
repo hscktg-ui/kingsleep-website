@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배송·체험·A/S 안내 — KING SLEEP</title>
+  <meta name="description" content="킹슬립 배송·설치·매장 체험·A/S·교환반품 정책 안내">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+  <div class="top-banner">
+    <span class="top-banner__item">배송·체험·A/S 정책 안내</span>
+    <span class="top-banner__dot"></span>
+    <a href="#" data-smartstore class="top-banner__item">스마트스토어 →</a>
+  </div>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="KING SLEEP 홈">
+        <img src="assets/logo-mark.png" alt="" class="logo__mark" width="34" height="34" aria-hidden="true">
+        <span class="logo__wordmark">KING SLEEP</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">홈</a>
+        <a href="products.html">제품</a>
+        <a href="index.html#stores">매장</a>
+        <a href="sleep-hub.html">수면가이드</a>
+      </nav>
+      <div class="header__actions">
+        <a href="#" data-smartstore class="btn-smartstore-header">스마트스토어</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="policy-page">
+    <div class="container">
+      <div class="section-label">
+        <div class="section-label__eyebrow">SERVICE POLICY</div>
+        <h2>배송·체험·A/S 안내</h2>
+        <p>배송·설치·매장 체험·A/S 정책을 한곳에서 확인하세요</p>
+      </div>
+
+      <div class="policy-grid" id="policy-grid"></div>
+
+      <div class="policy-cta" id="experience">
+        <h3>매장 체험 예약</h3>
+        <p>매트리스는 10–15분 누워보신 후 선택하시는 것을 권장합니다. 전화 또는 카카오톡으로 가까운 매장을 안내받으세요.</p>
+        <div class="policy-cta__actions">
+          <a href="tel:07012345678" class="btn-primary">070-1234-5678</a>
+          <a href="#" data-kakao class="btn-outline">카카오톡 상담</a>
+          <a href="index.html#stores" class="btn-outline">매장 목록</a>
+        </div>
+      </div>
+
+      <p class="policy-note" id="installment-policy"></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__bottom">© KING SLEEP. ALL RIGHTS RESERVED.</div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("policy-grid").innerHTML = KING_SLEEP_DATA.servicePolicies.map((p) => `
+      <div class="policy-card">
+        <h3>${p.title}</h3>
+        <ul>${p.items.map((i) => `<li>${i}</li>`).join("")}</ul>
+      </div>
+    `).join("");
+    document.getElementById("installment-policy").textContent =
+      "구매·결제·할부: " + KING_SLEEP_DATA.purchaseNotice + " " + KING_SLEEP_DATA.installmentNote;
+  </script>
+</body>
+</html>

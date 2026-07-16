@@ -1,0 +1,250 @@
+const KING_SLEEP_DATA = {
+  smartstoreUrl: "https://smartstore.naver.com/kingsleep",
+  smartstoreLabel: "네이버 스마트스토어",
+  kakaoChannelUrl: "https://pf.kakao.com/_kingsleep",
+  purchaseNotice: "본 사이트는 제품 안내용입니다. 구매·결제는 네이버 스마트스토어에서 진행됩니다.",
+  installmentNote: "스마트스토어 카드 무이자 할부 · 카드사별 상이",
+
+  bannerMessages: [
+    "제품 안내 사이트 · 구매는 네이버 스마트스토어",
+    "전국 무료 배송 · 전문 기사 설치",
+    "매장 체험 예약 · 수면 전문 상담 070-1234-5678",
+    "카카오톡 채널 상담 · 빠른 제품 문의",
+  ],
+
+  brandMilestones: [
+    { year: "2018", title: "KING SLEEP 런칭", desc: "프리미엄 수면 가구 브랜드로 첫 발을 내디뎠습니다." },
+    { year: "2020", title: "KOTITI 인증 원단 도입", desc: "국내 유일 수준의 원단 시험성적서 기반 품질 체계를 구축했습니다." },
+    { year: "2023", title: "전국 체험관 4곳 오픈", desc: "시몬스·에이스식 오프라인 체험 인프라를 확대했습니다." },
+    { year: "2026", title: "원스톱 라인업 완성", desc: "매트리스·베딩·헤드보드 통합 브랜드 스토리를 완성했습니다." },
+  ],
+
+  familyCases: [
+    {
+      persona: "신혼부부",
+      title: "둘 다 만족하는 매트리스",
+      text: "체형이 달라 고민했는데 7존 스프링 덕분에 둘 다 편하게 잠들어요. 네이비 침실 무드도 완벽합니다.",
+      product: "로얄 시그니처 매트리스",
+      link: "product.html?id=royal-signature",
+      image: "assets/images/interior-navy.jpg",
+    },
+    {
+      persona: "40대 가족",
+      title: "아이와 함께하는 안심 수면",
+      text: "KOTITI 인증 원단이라 아이 피부에 닿는 베딩 선택이 수월했어요. 딥 슬립 세트로 침실을 한번에 맞췄습니다.",
+      product: "딥 슬립 베딩 세트",
+      link: "product.html?id=deep-sleep-set",
+      image: "assets/images/bedding-deep.jpg",
+    },
+    {
+      persona: "시니어",
+      title: "매장 체험 후 결정",
+      text: "전화 상담으로 가까운 매장을 안내받고 직접 누워본 뒤 구매했습니다. 허리 지지가 확실해요.",
+      product: "하이브리드 엘리트 매트리스",
+      link: "product.html?id=hybrid-elite",
+      image: "assets/images/mattress-detail.jpg",
+    },
+  ],
+
+  stylingGallery: [
+    { title: "네이비 톤 마스터 베드룸", tag: "MATTRESS", image: "assets/images/interior-navy.jpg", link: "product.html?id=royal-signature" },
+    { title: "호텔형 화이트 베딩", tag: "BEDDING", image: "assets/images/bedding-deep.jpg", link: "product.html?id=deep-sleep-set" },
+    { title: "프리미엄 헤드보드 포인트", tag: "HEADBOARD", image: "assets/images/headboard-royal.jpg", link: "product.html?id=royal-headboard" },
+    { title: "시티뷰 침실 스타일링", tag: "LIFESTYLE", image: "assets/images/hero-bedroom.jpg", link: "sleep-hub.html#interior" },
+  ],
+
+  servicePolicies: [
+    { title: "배송·설치", items: ["전국 무료 배송 (도서산간 제외)", "전문 기사 2인 방문 설치", "설치 후 잔여 포장재 수거"] },
+    { title: "매장·체험", items: ["전국 4개 체험관·쇼룸 운영", "매트리스 10–15분 체험 권장", "사전 전화 예약 시 전담 상담"] },
+    { title: "A/S·보증", items: ["스프링·내부재 10년 품질 보증", "원단·외관 1년 무상 A/S", "스마트스토어 구매 고객 동일 적용"] },
+    { title: "교환·반품", items: ["스마트스토어 정책 기준", "개봉·사용 제품 제한 사항 별도 안내", "고객센터 070-1234-5678"] },
+  ],
+
+  products: [
+    {
+      id: "royal-signature",
+      name: "로얄 시그니처",
+      nameFull: "로얄 시그니처 매트리스",
+      category: "mattress",
+      tab: "best",
+      badge: "BEST",
+      tagline: "프리미엄 수면의 새로운 기준",
+      description: "7존 독립 포켓스프링과 메모리폼·라텍스 레이어가 만나 깊고 편안한 휴식을 완성합니다.",
+      spec: "30cm · 7존 독립스프링 · 메모리폼 + 라텍스",
+      image: "assets/images/mattress-royal.jpg",
+      link: "product.html?id=royal-signature",
+      rating: 4.9,
+      reviews: 128,
+      referencePrice: "₩890,000~",
+      techMetrics: [
+        { label: "스프링 수 (Q)", value: "1,020개" },
+        { label: "폼 밀도", value: "45kg/m³" },
+        { label: "총 높이", value: "30cm" },
+      ],
+      technologies: [
+        { title: "7-Zone System", desc: "머리·어깨·허리·골반·다리별 체압을 분산하는 7존 독립 스프링 구조" },
+        { title: "Deep Comfort Layer", desc: "메모리폼과 라텍스가 이중으로 감싸 체형에 맞는 맞춤 지지" },
+        { title: "Royal Quilt Cover", desc: "KOTITI 인증 항균·방수 퀼팅 원단" },
+      ],
+      materials: ["항균 퀼팅 원단", "쿨링 메모리폼", "천연 라텍스", "7존 포켓스프링"],
+      sizes: [
+        { name: "퀸 (Q)", width: "150cm", length: "200cm", height: "30cm" },
+        { name: "킹 (K)", width: "180cm", length: "200cm", height: "30cm" },
+        { name: "LK", width: "200cm", length: "220cm", height: "30cm" },
+      ],
+    },
+    {
+      id: "cloud-comfort",
+      name: "클라우드 컴포트",
+      nameFull: "클라우드 컴포트 매트리스",
+      category: "mattress",
+      tab: "best",
+      badge: null,
+      tagline: "구름 위에 누운 듯한 포근함",
+      description: "쿨링 젤 레이어와 포켓스프링이 만나 사계절 쾌적한 수면 환경을 제공합니다.",
+      spec: "28cm · 포켓스프링 · 쿨링 젤 레이어",
+      image: "assets/images/mattress-cloud.jpg",
+      link: "product.html?id=cloud-comfort",
+      rating: 4.8,
+      reviews: 96,
+      referencePrice: "₩690,000~",
+      techMetrics: [
+        { label: "스프링 수 (Q)", value: "880개" },
+        { label: "쿨링 젤 레이어", value: "3cm" },
+        { label: "총 높이", value: "28cm" },
+      ],
+      technologies: [
+        { title: "Cooling Gel Layer", desc: "체열을 분산해 여름에도 쾌적한 접촉면 유지" },
+        { title: "Pocket Spring", desc: "독립 스프링이 파트너의 움직임 전달을 최소화" },
+      ],
+      materials: ["쿨링 젤 폼", "고탄성 폼", "포켓스프링"],
+      sizes: [
+        { name: "퀸 (Q)", width: "150cm", length: "200cm", height: "28cm" },
+        { name: "킹 (K)", width: "180cm", length: "200cm", height: "28cm" },
+      ],
+    },
+    {
+      id: "hybrid-elite",
+      name: "하이브리드 엘리트",
+      nameFull: "하이브리드 엘리트 매트리스",
+      category: "mattress",
+      tab: "best",
+      badge: "BEST",
+      tagline: "듀얼 스프링의 완벽한 밸런스",
+      description: "듀얼 스프링 시스템과 프리미엄 폼 레이어로 지지력과 편안함을 동시에 제공합니다.",
+      spec: "32cm · 듀얼 스프링 · 라텍스 + 메모리폼",
+      image: "assets/images/mattress-detail.jpg",
+      link: "product.html?id=hybrid-elite",
+      rating: 4.9,
+      reviews: 67,
+      referencePrice: "₩1,120,000~",
+      techMetrics: [
+        { label: "듀얼 스프링", value: "1,240개" },
+        { label: "라텍스 레이어", value: "4cm" },
+        { label: "총 높이", value: "32cm" },
+      ],
+      technologies: [
+        { title: "Dual Spring System", desc: "이중 스프링 구조로 반발력과 내구성을 강화" },
+        { title: "Elite Comfort Stack", desc: "32cm 두께의 프리미엄 멀티 레이어" },
+      ],
+      materials: ["메모리폼", "라텍스", "듀얼 포켓스프링"],
+      sizes: [
+        { name: "퀸 (Q)", width: "150cm", length: "200cm", height: "32cm" },
+        { name: "킹 (K)", width: "180cm", length: "200cm", height: "32cm" },
+      ],
+    },
+    {
+      id: "deep-sleep-set",
+      name: "딥 슬립",
+      nameFull: "딥 슬립 베딩 세트",
+      category: "bedding",
+      tab: "new",
+      badge: "NEW",
+      tagline: "피부에 닿는 순간의 차이",
+      description: "100% 순면 이불·베개·커버 세트로 수면 환경을 완성합니다.",
+      spec: "이불 + 베개 + 커버 · 100% 순면",
+      image: "assets/images/bedding-deep.jpg",
+      link: "product.html?id=deep-sleep-set",
+      rating: 4.7,
+      reviews: 54,
+      referencePrice: "₩320,000~",
+      technologies: [
+        { title: "Pure Cotton", desc: "통기성과 부드러움을 갖춘 100% 순면" },
+      ],
+      materials: ["100% 순면", "KOTITI 인증 원단"],
+      sizes: [{ name: "퀸 세트", width: "—", length: "—", height: "—" }],
+    },
+    {
+      id: "royal-headboard",
+      name: "로얄 벨벳",
+      nameFull: "로얄 벨벳 헤드보드",
+      category: "headboard",
+      tab: "new",
+      badge: null,
+      tagline: "침실의 품격을 완성하는 포인트",
+      description: "버튼 튜프팅 벨벳 헤드보드로 프리미엄 침실 무드를 연출합니다.",
+      spec: "벨벳 · 버튼 튜프팅 · 퀸/킹",
+      image: "assets/images/headboard-royal.jpg",
+      link: "product.html?id=royal-headboard",
+      rating: 4.8,
+      reviews: 41,
+      referencePrice: "₩450,000~",
+      technologies: [
+        { title: "Button Tufting", desc: "클래식 체스터필드 스타일의 고급 마감" },
+      ],
+      materials: ["프리미엄 벨벳", "목재 프레임"],
+      sizes: [
+        { name: "퀸", width: "160cm", length: "120cm", height: "—" },
+        { name: "킹", width: "190cm", length: "120cm", height: "—" },
+      ],
+    },
+    {
+      id: "cooling-pad",
+      name: "로얄 쿨링",
+      nameFull: "로얄 쿨링 패드",
+      category: "bedding",
+      tab: "new",
+      badge: "NEW",
+      tagline: "사계절 쾌적한 접촉면",
+      description: "접촉면 쿨링 원단으로 더운 계절에도 편안한 수면을 돕습니다.",
+      spec: "쿨링 원단 · 사계절 사용",
+      image: "assets/images/collection-bedding.jpg",
+      link: "product.html?id=cooling-pad",
+      rating: 4.6,
+      reviews: 32,
+      referencePrice: "₩189,000~",
+      technologies: [{ title: "Cool Touch Fabric", desc: "피부 접촉 시 시원함을 유지하는 특수 원단" }],
+      materials: ["쿨링 폴리에스터", "KOTITI 인증"],
+      sizes: [{ name: "퀸", width: "150cm", length: "200cm", height: "—" }],
+    },
+  ],
+
+  reviews: [
+    { title: "조명 침대", author: "김*현 · 30대 신혼", product: "로얄 시그니처 매트리스", text: "여러 군데 돌아보다 최종 선택했는데, 뒤척일 때 흔들림이 거의 없어서 수면 질이 좋아진 게 체감돼요.", rating: 5 },
+    { title: "기능성 침대", author: "이*영 · 40대 가족", product: "클라우드 컴포트 매트리스", text: "편안한 숙면과 침실 인테리어 미학을 모두 잡았어요.", rating: 5 },
+    { title: "호텔형 침실", author: "박*수 · 40대", product: "로얄 벨벳 헤드보드", text: "네이비 톤 침실과 너무 잘 어울려요. 프레임 곡선이 부드럽습니다.", rating: 5 },
+    { title: "침대는 킹슬립", author: "최*진 · 50대", product: "하이브리드 엘리트 매트리스", text: "10년 품질 보증이 안심됐고, 매장에서 직접 누워보고 결정했습니다.", rating: 5 },
+  ],
+
+  stores: [
+    { name: "킹슬립 강남 체험관", address: "서울 강남구 테헤란로 123", hours: "10:30 – 19:00", tel: "070-1234-5678", type: "체험관" },
+    { name: "킹슬립 판교 쇼룸", address: "경기 성남시 분당구 판교역로 166", hours: "11:00 – 20:00", tel: "070-1234-5679", type: "쇼룸" },
+    { name: "킹슬립 부산 센텀", address: "부산 해운대구 센텀동로 55", hours: "11:00 – 20:00", tel: "070-1234-5680", type: "백화점" },
+    { name: "킹슬립 대구 동성로", address: "대구 중구 동성로 45", hours: "10:30 – 19:30", tel: "070-1234-5681", type: "매장" },
+  ],
+
+  articles: [
+    { title: "7존 독립스프링, 체압 분산이란?", date: "2026-07-10", excerpt: "머리·어깨·허리·골반별 지지 원리와 매트리스 선택 가이드", link: "sleep-hub.html#spring" },
+    { title: "침실 인테리어, 네이비 톤이 수면에 좋은 이유", date: "2026-07-05", excerpt: "빛·색채 심리와 프리미엄 침실 연출 팁", link: "sleep-hub.html#interior" },
+    { title: "KOTITI 인증 원단, 무엇이 다른가", date: "2026-06-28", excerpt: "포름알데히드·방염·마찰견뢰도 시험 항목 쉬운 설명", link: "kotiti-report.html" },
+    { title: "매트리스 경도, 나에게 맞는 선택법", date: "2026-06-15", excerpt: "체형·수면 자세별 소프트·미디엄·하드 추천", link: "sleep-hub.html#firmness" },
+  ],
+};
+
+function getSmartstoreUrl() {
+  return KING_SLEEP_DATA.smartstoreUrl;
+}
+
+function getProduct(id) {
+  return KING_SLEEP_DATA.products.find((p) => p.id === id) || KING_SLEEP_DATA.products[0];
+}

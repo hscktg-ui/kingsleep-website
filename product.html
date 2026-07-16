@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로얄 시그니처 매트리스 — KING SLEEP</title>
+  <meta name="description" content="킹슬립 로얄 시그니처 매트리스 제품 안내">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+
+  <div class="top-banner">
+    <span class="top-banner__item">제품 안내 · 구매는 스마트스토어</span>
+    <span class="top-banner__dot"></span>
+    <a href="#" data-smartstore class="top-banner__item">스마트스토어 →</a>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="KING SLEEP 홈">
+        <img src="assets/logo-mark.png" alt="" class="logo__mark" width="34" height="34" aria-hidden="true">
+        <span class="logo__wordmark">KING SLEEP</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">홈</a>
+        <a href="products.html">제품</a>
+        <a href="index.html#stores">매장</a>
+        <a href="sleep-hub.html">수면가이드</a>
+      </nav>
+      <div class="header__actions">
+        <a href="#" data-smartstore class="btn-smartstore-header">스마트스토어</a>
+        <button class="menu-toggle" aria-label="메뉴"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-detail product-detail--catalog">
+    <div class="product-hero">
+      <div class="container product-hero__inner">
+        <span class="product-hero__category">매트리스</span>
+        <h1 class="product-hero__title">로얄 시그니처</h1>
+        <p class="product-hero__tagline">프리미엄 수면의 새로운 기준</p>
+        <p class="product-hero__desc">7존 독립 포켓스프링과 메모리폼·라텍스 레이어가 만나 깊고 편안한 휴식을 완성합니다.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="purchase-notice-bar" id="purchase-notice"></div>
+
+      <div class="product-detail__layout">
+        <div class="product-gallery">
+          <div class="product-gallery__thumbs">
+            <button class="product-gallery__thumb active"><img src="assets/images/mattress-royal.jpg" alt=""></button>
+            <button class="product-gallery__thumb"><img src="assets/images/mattress-detail.jpg" alt=""></button>
+            <button class="product-gallery__thumb"><img src="assets/images/interior-navy.jpg" alt=""></button>
+          </div>
+          <div class="product-gallery__main">
+            <img src="assets/images/mattress-royal.jpg" alt="">
+          </div>
+        </div>
+
+        <aside class="product-sidebar product-sidebar--info">
+          <h2 class="product-sidebar__title">로얄 시그니처 매트리스</h2>
+          <p class="product-sidebar__ref-price">참고가 ₩890,000~</p>
+          <p class="product-sidebar__review-meta" id="product-review-meta"></p>
+          <p class="product-sidebar__price-note">※ 실제 판매가·옵션·재고는 스마트스토어 기준</p>
+          <p class="product-sidebar__installment" id="installment-note"></p>
+
+          <ul class="product-sidebar__highlights">
+            <li>7존 독립 포켓스프링</li>
+            <li>메모리폼 + 라텍스 레이어</li>
+            <li>KOTITI 인증 원단</li>
+            <li>10년 품질 보증</li>
+          </ul>
+
+          <a href="#" data-smartstore class="btn-primary">스마트스토어에서 구매</a>
+          <a href="tel:07012345678" class="btn-secondary" style="display:block;text-align:center">전화 상담 070-1234-5678</a>
+          <a href="index.html#stores" class="btn-outline" style="display:block;text-align:center;margin-top:8px">매장에서 체험하기</a>
+        </aside>
+      </div>
+
+      <section class="product-tech-section">
+        <h2 class="product-section-title">핵심 기술</h2>
+        <div class="tech-metrics" id="product-tech-metrics-wrap">
+          <div class="tech-metrics__grid" id="product-tech-metrics"></div>
+        </div>
+        <div class="tech-blocks" id="product-technologies"></div>
+      </section>
+
+      <div class="tech-viz">
+        <h3>매트리스 레이어 구조</h3>
+        <div class="tech-layers">
+          <div class="tech-layer"><span>퀼팅 커버</span><span>항균 · 방수</span></div>
+          <div class="tech-layer"><span>메모리폼</span><span>5cm</span></div>
+          <div class="tech-layer"><span>라텍스</span><span>3cm</span></div>
+          <div class="tech-layer"><span>7존 포켓스프링</span><span>18cm</span></div>
+        </div>
+      </div>
+
+      <section class="product-tech-section">
+        <h2 class="product-section-title">소재 구성</h2>
+        <ul class="materials-list" id="product-materials"></ul>
+      </section>
+
+      <section class="product-tech-section">
+        <h2 class="product-section-title">사이즈 스펙</h2>
+        <div id="product-sizes"></div>
+      </section>
+
+      <div class="product-info">
+        <div class="product-info__tabs">
+          <button class="product-info__tab active" data-panel="detail">상세 안내</button>
+          <button class="product-info__tab" data-panel="guide">선택 가이드</button>
+          <button class="product-info__tab" data-panel="delivery">배송·A/S</button>
+        </div>
+        <div class="product-info__panel" data-panel="detail">
+          <div class="product-info__content">
+            <p>KOTITI 시험성적서 인증 원단을 사용합니다. <a href="kotiti-report.html">시험성적서 보기</a></p>
+          </div>
+        </div>
+        <div class="product-info__panel" data-panel="guide" hidden>
+          <div class="product-info__content">
+            <p>매장에서 10–15분 누워보시거나, <a href="sleep-hub.html#firmness">경도 가이드</a>를 참고해 주세요.</p>
+          </div>
+        </div>
+        <div class="product-info__panel" data-panel="delivery" hidden>
+          <div class="product-info__content">
+            <p>배송·설치 일정 및 A/S는 스마트스토어 구매 고객 기준으로 안내됩니다. 매장 체험 후 구매를 권장합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lineup-smartstore-cta">
+        <h3>이 제품 구매하기</h3>
+        <p>가격·옵션·배송·할인은 네이버 스마트스토어에서 확인하세요.</p>
+        <a href="#" data-smartstore class="btn-primary" style="display:inline-block;width:auto;padding:14px 32px">스마트스토어 이동</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__bottom">© KING SLEEP. ALL RIGHTS RESERVED.</div>
+  </footer>
+
+  <div class="phone-cta">
+    <a href="tel:07012345678" class="phone-cta__btn">070-1234-5678</a>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
