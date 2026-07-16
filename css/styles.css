@@ -119,6 +119,7 @@ button {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--gray-200);
   transition: box-shadow 0.3s var(--ease);
+  overflow: visible;
 }
 
 .header.scrolled {
@@ -136,18 +137,20 @@ button {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
   text-decoration: none;
+  overflow: visible;
 }
 
 .logo__mark {
-  height: 36px !important;
-  width: auto !important;
-  max-width: 48px;
+  height: 42px;
+  width: auto;
   flex-shrink: 0;
   object-fit: contain;
+  object-position: center;
   display: block;
+  background: transparent;
 }
 
 .logo__copy {
@@ -266,10 +269,12 @@ button {
 }
 
 .hero__brand-mark {
-  height: 56px !important;
-  width: auto !important;
-  max-width: 80px;
+  height: 72px;
+  width: auto;
   object-fit: contain;
+  object-position: center;
+  display: block;
+  background: transparent;
 }
 
 .hero__brand-wordmark {
@@ -776,10 +781,12 @@ button {
 }
 
 .brand-promise__mark {
-  height: 48px !important;
-  width: auto !important;
-  max-width: 72px;
+  height: 64px;
+  width: auto;
   object-fit: contain;
+  object-position: center;
+  display: block;
+  background: transparent;
 }
 
 .brand-promise__wordmark {
@@ -836,12 +843,13 @@ button {
 }
 
 .footer__logo .logo__mark {
-  width: 40px !important;
-  height: 40px !important;
-  max-width: 40px !important;
+  width: auto;
+  height: 48px;
   flex-shrink: 0;
   object-fit: contain;
+  object-position: center;
   display: block;
+  background: transparent;
 }
 
 .footer__logo .logo__copy {
@@ -1278,6 +1286,10 @@ button {
     display: none;
   }
 
+  .logo__mark {
+    height: 34px;
+  }
+
   .logo__wordmark {
     font-size: 1.05rem;
     letter-spacing: 0.1em;
@@ -1287,12 +1299,12 @@ button {
     display: none;
   }
 
-  .logo__mark {
-    height: 30px;
+  .hero__brand-mark {
+    height: 56px;
   }
 
-  .hero__brand-mark {
-    height: 44px;
+  .brand-promise__mark {
+    height: 52px;
   }
 
   .nav {
