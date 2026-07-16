@@ -1,0 +1,22 @@
+{
+  "name": "KING SLEEP",
+  "short_name": "KING SLEEP",
+  "description": "프리미엄 수면 가구 — 좋은 잠이 좋은 하루를 만듭니다",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1C3A",
+  "theme_color": "#0A1C3A",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
