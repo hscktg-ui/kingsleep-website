@@ -1,23 +1,25 @@
 /* King Sleep — Premium bedding brand */
 :root {
-  --navy: #0d1b2a;
-  --navy-light: #1b2d45;
-  --gold: #c5a059;
-  --gold-light: #d4b87a;
-  --gold-muted: rgba(197, 160, 89, 0.15);
+  --navy: #2f4a6a;
+  --navy-deep: #1e334d;
+  --navy-light: #4a6a8a;
+  --navy-wash: #eef2f7;
+  --gold: #c9a84f;
+  --gold-light: #dbbf78;
+  --gold-muted: rgba(201, 168, 79, 0.18);
   --white: #ffffff;
-  --off-white: #f7f6f3;
-  --gray-100: #f0efec;
-  --gray-200: #e2e0db;
+  --off-white: #faf9f7;
+  --gray-100: #f3f2ef;
+  --gray-200: #e5e3de;
   --gray-400: #9a968e;
   --gray-600: #5c5a55;
-  --text: #1a1a1a;
+  --text: #243040;
   --max-width: 1280px;
   --header-h: 76px;
   --banner-h: 40px;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-sm: 0 2px 12px rgba(13, 27, 42, 0.06);
-  --shadow-md: 0 8px 32px rgba(13, 27, 42, 0.1);
+  --shadow-sm: 0 2px 12px rgba(47, 74, 106, 0.06);
+  --shadow-md: 0 8px 32px rgba(47, 74, 106, 0.1);
 }
 
 *,
@@ -77,8 +79,9 @@ button {
   right: 0;
   z-index: 200;
   height: var(--banner-h);
-  background: var(--navy);
-  color: var(--gold);
+  background: var(--navy-wash);
+  color: var(--navy);
+  border-bottom: 1px solid var(--gray-200);
   font-size: 0.8125rem;
   letter-spacing: 0.04em;
   display: flex;
@@ -241,14 +244,14 @@ button {
   transition: transform 0.3s;
 }
 
-/* ── Hero (Simmons: 시원한 비주얼) ── */
+/* ── Hero ── */
 .hero {
   margin-top: calc(var(--banner-h) + var(--header-h));
   min-height: calc(100vh - var(--banner-h) - var(--header-h));
   max-height: 900px;
   display: grid;
   grid-template-columns: 1fr 1.1fr;
-  background: var(--navy);
+  background: linear-gradient(160deg, #f7f9fc 0%, #e8eef6 48%, #dce6f1 100%);
   overflow: hidden;
 }
 
@@ -257,7 +260,7 @@ button {
   flex-direction: column;
   justify-content: center;
   padding: 80px 64px 80px max(48px, calc((100vw - var(--max-width)) / 2 + 24px));
-  color: var(--white);
+  color: var(--navy);
 }
 
 .hero__brand {
@@ -282,21 +285,21 @@ button {
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 600;
   letter-spacing: 0.16em;
-  color: var(--gold);
+  color: var(--navy);
   line-height: 1.1;
 }
 
 .hero__brand-slogan {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--navy-light);
   text-transform: uppercase;
 }
 
 .hero__brand-tagline {
   font-family: "Noto Serif KR", serif;
   font-size: 0.9375rem;
-  color: var(--gold-light);
+  color: var(--gold);
   letter-spacing: 0.02em;
 }
 
@@ -305,7 +308,7 @@ button {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 600;
   letter-spacing: 0.14em;
-  color: var(--gold);
+  color: var(--navy);
   line-height: 1.1;
   margin-bottom: 12px;
 }
@@ -313,7 +316,7 @@ button {
 .hero__tagline-en {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
-  color: var(--gold-light);
+  color: var(--navy-light);
   margin-bottom: 32px;
 }
 
@@ -339,7 +342,7 @@ button {
 .hero__tagline-ko {
   font-family: "Cormorant Garamond", "Noto Serif KR", serif;
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--gray-600);
   margin-bottom: 48px;
 }
 
@@ -364,18 +367,19 @@ button {
   justify-content: center;
   color: var(--gold);
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .hero__value-title {
   font-size: 0.625rem;
   letter-spacing: 0.12em;
-  color: var(--gold);
+  color: var(--navy);
   margin-bottom: 4px;
 }
 
 .hero__value-desc {
   font-size: 0.6875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--gray-600);
   line-height: 1.4;
 }
 
@@ -394,7 +398,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, var(--navy) 0%, transparent 30%);
+  background: linear-gradient(90deg, #e8eef6 0%, transparent 32%);
   z-index: 1;
   pointer-events: none;
 }
@@ -472,7 +476,7 @@ button {
 .promo-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(13, 27, 42, 0.7) 0%, transparent 60%);
+  background: linear-gradient(0deg, rgba(47, 74, 106, 0.7) 0%, transparent 60%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -528,7 +532,7 @@ button {
 .product-card__hover {
   position: absolute;
   inset: 0;
-  background: rgba(13, 27, 42, 0.82);
+  background: rgba(47, 74, 106, 0.82);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -766,8 +770,8 @@ button {
 
 /* ── Brand promise band ── */
 .brand-promise {
-  background: var(--navy);
-  color: var(--white);
+  background: linear-gradient(180deg, var(--navy-wash) 0%, #e4ebf4 100%);
+  color: var(--navy);
   padding: 56px 0;
   text-align: center;
 }
@@ -794,13 +798,13 @@ button {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.16em;
-  color: var(--gold);
+  color: var(--navy);
 }
 
 .brand-promise__slogan {
   font-size: 0.6875rem;
   letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--navy-light);
   text-transform: uppercase;
 }
 
@@ -816,7 +820,7 @@ button {
   margin: 0 auto;
   font-size: 0.9375rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--gray-600);
 }
 
 /* ── Footer ── */
@@ -903,8 +907,9 @@ button {
 }
 
 .footer__bottom {
-  background: var(--navy);
-  color: rgba(255, 255, 255, 0.6);
+  background: var(--navy-wash);
+  color: var(--navy-light);
+  border-top: 1px solid var(--gray-200);
   text-align: center;
   padding: 16px;
   font-size: 0.75rem;
@@ -1207,7 +1212,7 @@ button {
   flex-direction: column;
   justify-content: flex-end;
   padding: 40px;
-  background: linear-gradient(0deg, rgba(13, 27, 42, 0.6) 0%, transparent 50%);
+  background: linear-gradient(0deg, rgba(47, 74, 106, 0.6) 0%, transparent 50%);
   color: var(--white);
 }
 

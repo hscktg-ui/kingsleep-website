@@ -4,8 +4,8 @@
   "description": "프리미엄 수면 가구 — 좋은 잠이 좋은 하루를 만듭니다",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0A1C3A",
-  "theme_color": "#0A1C3A",
+  "background_color": "#2F4A6A",
+  "theme_color": "#2F4A6A",
   "lang": "ko",
   "icons": [
     {
