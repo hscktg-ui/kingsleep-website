@@ -6,8 +6,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
-NAVY = (47, 74, 106, 255)
-GOLD = (199, 151, 50, 255)
+NAVY = (13, 27, 42, 255)
+GOLD = (197, 160, 89, 255)
 WHITE = (255, 255, 255, 255)
 
 
@@ -152,8 +152,8 @@ def main() -> None:
   "description": "프리미엄 수면 가구 — 좋은 잠이 좋은 하루를 만듭니다",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2F4A6A",
-  "theme_color": "#2F4A6A",
+  "background_color": "#0D1B2A",
+  "theme_color": "#0D1B2A",
   "lang": "ko",
   "icons": [
     {

@@ -1,25 +1,31 @@
-/* King Sleep — Premium bedding brand */
+/* King Sleep — Premium sleep furniture (navy · gold · linen) */
 :root {
-  --navy: #2f4a6a;
-  --navy-deep: #1e334d;
-  --navy-light: #4a6a8a;
-  --navy-wash: #eef2f7;
-  --gold: #c9a84f;
-  --gold-light: #dbbf78;
-  --gold-muted: rgba(201, 168, 79, 0.18);
+  --navy: #0d1b2a;
+  --navy-deep: #07131f;
+  --navy-light: #1b2d45;
+  --navy-mist: #243447;
+  --navy-wash: #eef1f4;
+  --gold: #c5a059;
+  --gold-light: #d4b87a;
+  --gold-muted: rgba(197, 160, 89, 0.15);
   --white: #ffffff;
-  --off-white: #faf9f7;
-  --gray-100: #f3f2ef;
-  --gray-200: #e5e3de;
+  --linen: #f6f3ed;
+  --off-white: #f7f6f3;
+  --gray-100: #f0efec;
+  --gray-200: #e2e0db;
   --gray-400: #9a968e;
   --gray-600: #5c5a55;
-  --text: #243040;
+  --text: #1a1a1a;
   --max-width: 1280px;
   --header-h: 76px;
   --banner-h: 40px;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-sm: 0 2px 12px rgba(47, 74, 106, 0.06);
-  --shadow-md: 0 8px 32px rgba(47, 74, 106, 0.1);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --shadow-sm: 0 2px 16px rgba(13, 27, 42, 0.07);
+  --shadow-md: 0 12px 40px rgba(13, 27, 42, 0.16);
+  --hairline-gold: rgba(197, 160, 89, 0.34);
 }
 
 *,
@@ -38,9 +44,14 @@ html {
 body {
   font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
-  background: var(--white);
+  background: var(--off-white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
 img {
@@ -79,9 +90,9 @@ button {
   right: 0;
   z-index: 200;
   height: var(--banner-h);
-  background: var(--navy-wash);
-  color: var(--navy);
-  border-bottom: 1px solid var(--gray-200);
+  background: var(--navy);
+  color: var(--gold);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.22);
   font-size: 0.8125rem;
   letter-spacing: 0.04em;
   display: flex;
@@ -118,15 +129,16 @@ button {
   right: 0;
   z-index: 100;
   height: var(--header-h);
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--gray-200);
-  transition: box-shadow 0.3s var(--ease);
+  background: rgba(247, 246, 243, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--hairline-gold);
+  transition: box-shadow 0.3s var(--ease), background 0.3s var(--ease);
   overflow: visible;
 }
 
 .header.scrolled {
   box-shadow: var(--shadow-sm);
+  background: rgba(247, 246, 243, 0.98);
 }
 
 .header__inner {
@@ -244,14 +256,16 @@ button {
   transition: transform 0.3s;
 }
 
-/* ── Hero ── */
+/* ── Hero (cinematic navy, gold lockup) ── */
 .hero {
   margin-top: calc(var(--banner-h) + var(--header-h));
-  min-height: calc(100vh - var(--banner-h) - var(--header-h));
-  max-height: 900px;
+  height: min(900px, calc(100vh - var(--banner-h) - var(--header-h)));
+  min-height: 560px;
   display: grid;
   grid-template-columns: 1fr 1.1fr;
-  background: linear-gradient(160deg, #f7f9fc 0%, #e8eef6 48%, #dce6f1 100%);
+  background:
+    radial-gradient(90% 70% at 12% 18%, rgba(197, 160, 89, 0.12) 0%, transparent 52%),
+    linear-gradient(165deg, var(--navy) 0%, var(--navy-deep) 100%);
   overflow: hidden;
 }
 
@@ -260,7 +274,7 @@ button {
   flex-direction: column;
   justify-content: center;
   padding: 80px 64px 80px max(48px, calc((100vw - var(--max-width)) / 2 + 24px));
-  color: var(--navy);
+  color: var(--white);
 }
 
 .hero__brand {
@@ -285,21 +299,21 @@ button {
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 600;
   letter-spacing: 0.16em;
-  color: var(--navy);
+  color: var(--gold);
   line-height: 1.1;
 }
 
 .hero__brand-slogan {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
-  color: var(--navy-light);
+  color: rgba(255, 255, 255, 0.62);
   text-transform: uppercase;
 }
 
 .hero__brand-tagline {
   font-family: "Noto Serif KR", serif;
   font-size: 0.9375rem;
-  color: var(--gold);
+  color: var(--gold-light);
   letter-spacing: 0.02em;
 }
 
@@ -308,7 +322,7 @@ button {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 600;
   letter-spacing: 0.14em;
-  color: var(--navy);
+  color: var(--gold);
   line-height: 1.1;
   margin-bottom: 12px;
 }
@@ -316,7 +330,7 @@ button {
 .hero__tagline-en {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
-  color: var(--navy-light);
+  color: var(--gold-light);
   margin-bottom: 32px;
 }
 
@@ -342,7 +356,7 @@ button {
 .hero__tagline-ko {
   font-family: "Cormorant Garamond", "Noto Serif KR", serif;
   font-size: 1.25rem;
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 48px;
 }
 
@@ -367,19 +381,19 @@ button {
   justify-content: center;
   color: var(--gold);
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(197, 160, 89, 0.08);
 }
 
 .hero__value-title {
   font-size: 0.625rem;
   letter-spacing: 0.12em;
-  color: var(--navy);
+  color: var(--gold);
   margin-bottom: 4px;
 }
 
 .hero__value-desc {
   font-size: 0.6875rem;
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.4;
 }
 
@@ -398,7 +412,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #e8eef6 0%, transparent 32%);
+  background: linear-gradient(90deg, var(--navy) 0%, transparent 30%);
   z-index: 1;
   pointer-events: none;
 }
@@ -476,7 +490,7 @@ button {
 .promo-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(47, 74, 106, 0.7) 0%, transparent 60%);
+  background: linear-gradient(0deg, rgba(13, 27, 42, 0.72) 0%, transparent 60%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -532,7 +546,7 @@ button {
 .product-card__hover {
   position: absolute;
   inset: 0;
-  background: rgba(47, 74, 106, 0.82);
+  background: rgba(13, 27, 42, 0.82);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -666,10 +680,11 @@ button {
 
 .trust-card {
   background: var(--off-white);
-  border-radius: 8px;
+  border-radius: var(--radius-lg);
   padding: 28px 20px;
   text-align: center;
   border: 1px solid var(--gray-200);
+  border-top: 2px solid var(--gold);
 }
 
 .trust-card__icon {
@@ -770,9 +785,11 @@ button {
 
 /* ── Brand promise band ── */
 .brand-promise {
-  background: linear-gradient(180deg, var(--navy-wash) 0%, #e4ebf4 100%);
-  color: var(--navy);
-  padding: 56px 0;
+  background:
+    radial-gradient(80% 120% at 50% 0%, rgba(197, 160, 89, 0.14) 0%, transparent 55%),
+    var(--navy);
+  color: var(--white);
+  padding: 72px 0;
   text-align: center;
 }
 
@@ -798,13 +815,13 @@ button {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.16em;
-  color: var(--navy);
+  color: var(--gold);
 }
 
 .brand-promise__slogan {
   font-size: 0.6875rem;
   letter-spacing: 0.14em;
-  color: var(--navy-light);
+  color: rgba(255, 255, 255, 0.55);
   text-transform: uppercase;
 }
 
@@ -820,12 +837,12 @@ button {
   margin: 0 auto;
   font-size: 0.9375rem;
   line-height: 1.8;
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ── Footer ── */
 .footer {
-  background: var(--gray-100);
+  background: var(--navy);
   padding: 64px 0 0;
 }
 
@@ -868,7 +885,7 @@ button {
   font-size: 1.25rem;
   letter-spacing: 0.14em;
   line-height: 1.15;
-  color: var(--navy);
+  color: var(--gold);
 }
 
 .footer__logo .logo__slogan {
@@ -876,14 +893,14 @@ button {
   letter-spacing: 0.08em;
   white-space: normal;
   line-height: 1.35;
-  color: var(--gray-400);
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }
 
 .footer__logo .logo__tagline {
   font-family: "Noto Serif KR", serif;
   font-size: 0.8125rem;
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.72);
   margin-top: 2px;
   line-height: 1.5;
 }
@@ -892,7 +909,7 @@ button {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: var(--navy);
+  color: var(--gold);
   margin-bottom: 16px;
 }
 
@@ -900,16 +917,21 @@ button {
   list-style: none;
 }
 
-.footer li {
+.footer li,
+.footer a {
   font-size: 0.8125rem;
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.8;
 }
 
+.footer a:hover {
+  color: var(--gold);
+}
+
 .footer__bottom {
-  background: var(--navy-wash);
-  color: var(--navy-light);
-  border-top: 1px solid var(--gray-200);
+  background: var(--navy-deep);
+  color: rgba(255, 255, 255, 0.42);
+  border-top: 1px solid rgba(197, 160, 89, 0.18);
   text-align: center;
   padding: 16px;
   font-size: 0.75rem;
@@ -1069,13 +1091,14 @@ button {
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  border-radius: 2px;
-  transition: background 0.3s;
+  border-radius: var(--radius-sm);
+  transition: background 0.3s, color 0.3s;
   margin-top: 8px;
 }
 
 .btn-primary:hover {
-  background: var(--navy-light);
+  background: var(--gold);
+  color: var(--navy);
 }
 
 .btn-secondary {
@@ -1212,7 +1235,7 @@ button {
   flex-direction: column;
   justify-content: flex-end;
   padding: 40px;
-  background: linear-gradient(0deg, rgba(47, 74, 106, 0.6) 0%, transparent 50%);
+  background: linear-gradient(0deg, rgba(13, 27, 42, 0.68) 0%, transparent 50%);
   color: var(--white);
 }
 
@@ -1235,6 +1258,8 @@ button {
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
+    height: auto;
+    min-height: 0;
     max-height: none;
   }
 
@@ -1318,7 +1343,7 @@ button {
     top: calc(var(--banner-h) + var(--header-h));
     left: 0;
     right: 0;
-    background: var(--white);
+    background: var(--off-white);
     flex-direction: column;
     padding: 24px;
     gap: 20px;

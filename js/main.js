@@ -8,7 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { passive: true });
 
   menuToggle?.addEventListener("click", () => {
-    nav?.classList.toggle("open");
+    const open = nav?.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav?.classList.contains("open")) {
+      nav.classList.remove("open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+      menuToggle?.focus();
+    }
   });
 
   document.querySelectorAll(".product-info__tab").forEach((tab) => {
