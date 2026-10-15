@@ -1,0 +1,11 @@
+.cursor
+scripts
+brand-source
+*.py
+assets/logo.png
+assets/logo-dark.png
+assets/logo-gold.png
+assets/logo-light.png
+assets/logo-compact.png
+assets/logo-mark.png
+assets/logo-mark-gold.png
