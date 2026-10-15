@@ -1,9 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "www.kingsleep.co.kr" }],
-      "destination": "https://kingsleep.co.kr/:path*",
+      "destination": "https://kingsleep.co.kr/:path",
       "permanent": true
     },
     { "source": "/index.html", "destination": "/", "permanent": true }
