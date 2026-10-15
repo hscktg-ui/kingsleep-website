@@ -8,7 +8,7 @@ const KING_SLEEP_DATA = {
     name: "킹슬립(KING SLEEP)",
     ceo: "강경육",
     bizNumber: "106-29-52393",
-    address: "경기도 시흥시 매화산단3길 1, 317호 (매화동, 리드스마트스퀘어)",
+    address: "경기도 시흥시 매화산단3길 1, 317호(매화동, 리드스마트스퀘어)",
   },
   contact: {
     phone: "031-573-9171",

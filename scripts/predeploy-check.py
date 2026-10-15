@@ -28,6 +28,7 @@ BANNED = {
     "경쟁사 이름": ["시몬스", "Simmons", "에이스", "지누스", "Zinus", "Lykke", "리케", "Oblique", "Flat Point",
                 "플랫포인트", "Jackson", "잭슨", "King Koil", "킹코일", "포터리반", "Pottery"],
     "이전 도메인": ["kingsleep-website.vercel.app"],
+    "대표 개인정보(생년월일)": ["1979-05-27", "1979.05.27", "1979년 05월 27일", "1979년 5월 27일", "790527"],
 }
 
 errors: list[str] = []
@@ -127,7 +128,7 @@ def main() -> int:
             err(f"{name}: og:image가 {SITE} 절대주소 아님")
         if "viewport" not in p.meta:
             err(f"{name}: viewport 없음")
-        page_text = (ROOT / name).read_text(encoding="utf-8")
+        page_text = re.sub(r"<[^>]+>", "", (ROOT / name).read_text(encoding="utf-8"))
         for label, value in facts.items():
             if value not in page_text:
                 err(f"{name}: 푸터 사업자 정보 누락 ({label}: {value})")
