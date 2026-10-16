@@ -1,5 +1,6 @@
 const KING_SLEEP_DATA = {
-  siteUrl: "https://kingsleep.co.kr",
+  // 바꿀 때는 HTML·sitemap·robots의 절대 주소도 함께 바꾸고 scripts/predeploy-check.py로 확인한다.
+  siteUrl: "https://kingsleep-website.vercel.app",
   smartstoreUrl: "https://smartstore.naver.com/kingsleep",
   purchaseNotice: "본 사이트는 제품 안내용입니다. 가격 확인·구매·결제는 네이버 스마트스토어에서 진행됩니다.",
 

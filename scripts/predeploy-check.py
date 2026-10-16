@@ -1,7 +1,7 @@
-"""Pre-deploy gate for kingsleep.co.kr. Run from anywhere:  python scripts/predeploy-check.py
+"""Pre-deploy gate for the KING SLEEP site. Run from anywhere:  python scripts/predeploy-check.py
 
 Fails (exit 1) on placeholder facts, inconsistent business info, broken local links,
-missing SEO tags, or deploy-hygiene problems. Facts come from js/data.js (company / contact).
+missing SEO tags, or deploy-hygiene problems. Facts and the site host come from js/data.js.
 """
 from __future__ import annotations
 
@@ -12,7 +12,9 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://kingsleep.co.kr"
+_site = re.search(r'siteUrl:\s*"([^"]+)"', (ROOT / "js" / "data.js").read_text(encoding="utf-8"))
+SITE = _site.group(1).rstrip("/") if _site else ""
+KNOWN_HOSTS = ("https://kingsleep.co.kr", "https://kingsleep-website.vercel.app")
 PAGES = sorted(ROOT.glob("*.html"))
 PUBLIC_TEXT = PAGES + sorted((ROOT / "css").glob("*.css")) + sorted((ROOT / "js").glob("*.js")) + [
     ROOT / "site.webmanifest", ROOT / "robots.txt", ROOT / "sitemap.xml"]
@@ -27,7 +29,7 @@ BANNED = {
     "미개설 연락 수단": ["quality@kingsleep", "data-kakao", "카카오톡"],
     "경쟁사 이름": ["시몬스", "Simmons", "에이스", "지누스", "Zinus", "Lykke", "리케", "Oblique", "Flat Point",
                 "플랫포인트", "Jackson", "잭슨", "King Koil", "킹코일", "포터리반", "Pottery"],
-    "이전 도메인": ["kingsleep-website.vercel.app"],
+    "siteUrl과 다른 호스트": [h for h in KNOWN_HOSTS if h != SITE],
     "대표 개인정보(생년월일)": ["1979-05-27", "1979.05.27", "1979년 05월 27일", "1979년 5월 27일", "790527"],
 }
 
@@ -91,6 +93,8 @@ def data_value(key: str) -> str:
 
 
 def main() -> int:
+    if SITE not in KNOWN_HOSTS:
+        err(f"data.js: siteUrl '{SITE}'이 알려진 호스트 {KNOWN_HOSTS}가 아님")
     facts = {k: data_value(k) for k in ("name", "ceo", "bizNumber", "address")}
     tel, phone, store = data_value("tel"), data_value("phone"), data_value("smartstoreUrl")
 

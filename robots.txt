@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kingsleep.co.kr/sitemap.xml
+Sitemap: https://kingsleep-website.vercel.app/sitemap.xml
